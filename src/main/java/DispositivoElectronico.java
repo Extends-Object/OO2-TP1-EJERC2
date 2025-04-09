@@ -1,7 +1,16 @@
+import exceptions.DatabaseConnectionException;
+
+import java.time.LocalDate;
+
 public class DispositivoElectronico {
 
+    private RegistroPedido registro;
 
-    public float totalConDescuentoAplicado (Pedido pedido, Tarjeta tarjetaCredito, Propina propina) {
+    public DispositivoElectronico(RegistroPedido registro) {
+        this.registro = registro;
+    }
+
+    public void totalConDescuentoAplicado (Pedido pedido, Tarjeta tarjetaCredito, Propina propina, LocalDate fecha) throws DatabaseConnectionException {
 
         float totalConDescuentoYPropina = 0;
 
@@ -10,8 +19,11 @@ public class DispositivoElectronico {
         float totalSinDescuento = pedido.calcularSubtotal();
 
         float totalConDescuento = totalSinDescuento - tarjetaCredito.aplicarDescuento(subtotalPlatos, subtotalBebidas);
+        totalConDescuentoYPropina = totalConDescuento + propina.aplicar(totalSinDescuento);
 
-        return totalConDescuentoYPropina = totalConDescuento + propina.aplicar(totalSinDescuento);		//Propina puede ser 0.02, 0.03, 0.05
+        this.registro.registrarPedido(fecha, totalConDescuentoYPropina);
+
+        //return totalConDescuentoYPropina = totalConDescuento + propina.aplicar(totalSinDescuento);		//Propina puede ser 0.02, 0.03, 0.05
     }
 
 }
