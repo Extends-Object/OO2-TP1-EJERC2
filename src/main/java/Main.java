@@ -46,8 +46,8 @@ public class Main {
 
             String emisor = "your.recipient@email.com";
             String destinatario = "john.doe@your.domain";
-            String asunto = "Transacción";
-            String cuerpo = "Usted se ha abonado un pedido.";
+            String asunto = "Solicitud de pedido";
+            String cuerpo = "Usted ha solicitado un pedido.";
 
             Notificador notificador = new NotificadorEmail();           //INSTANCIO EL NOTIFICADOR
 

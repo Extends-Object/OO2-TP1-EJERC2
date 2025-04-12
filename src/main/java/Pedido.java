@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    //ArrayList<Producto> listaSeleccionados;
+    private static int id = 1;
 
-    ArrayList<Producto> listaPlatos;
-    ArrayList<Producto> listaBebidas;
+    private ArrayList<Producto> listaPlatos;
+    private ArrayList<Producto> listaBebidas;
 
     private float subtotalPlatos;
     private float subtotalBebidas;
@@ -14,6 +14,9 @@ public class Pedido {
 
 
     public Pedido() {
+
+        this.id ++;
+
         this.listaPlatos = new ArrayList<>();
         this.listaBebidas = new ArrayList<>();
 
