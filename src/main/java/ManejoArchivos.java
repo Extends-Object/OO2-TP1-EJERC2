@@ -2,32 +2,7 @@ import java.io.*;
 
 public class ManejoArchivos {
 
-
-    public static void actualizarVentas(String nombreArchivo, String contenido){
-
-        File archivo = new File(nombreArchivo);
-
-        try {
-            PrintWriter salida = new PrintWriter(new FileWriter(archivo, true));
-            salida.println(contenido);
-            salida.close();
-            System.out.println("Se actualizó en el archivo correctamente.");
-        } catch (FileNotFoundException e) {
-            System.out.println("Error: No se encontró el archivo");
-        } catch (IOException e) {
-            System.out.println("Error: no se pudo actualizar el archivo");
-        }
-
-    }
-
-
-
-
-
-
-
-
-
+    //************************* CLASE PARA REPASO DE CONCEPTOS  - MANEJO DE ARCHIVOS ***********************************
 
     public static void crearArchivo(String nombreArchivo){
 
