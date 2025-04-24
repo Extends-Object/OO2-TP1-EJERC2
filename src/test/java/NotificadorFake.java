@@ -1,13 +1,16 @@
+import modelo.Notificacion;
+import modelo.Notificador;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotificadorFake implements Notificador{
+public class NotificadorFake implements Notificador {
     private final List<String> mensajesEnviados = new ArrayList<>();
 
     @Override
-    public void notificar(String emisor, String destinatario, String asunto, String cuerpo) {
+    public void notificar(Notificacion notificacion) {
 
-        this.mensajesEnviados.add("Para: " + destinatario + ", Asunto: " + asunto + ", Mensaje: " + cuerpo);
+        this.mensajesEnviados.add("Para: " + notificacion.getDestinatario() + ", Asunto: " + notificacion.getAsunto() + ", Mensaje: " + notificacion.getCuerpo());
 
     }
 
