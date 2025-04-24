@@ -1,4 +1,6 @@
-public class Plato extends Producto{
+package modelo;
+
+public class Plato extends Producto {
 
     public Plato(String nombre, float precio) {
         super(nombre, precio);

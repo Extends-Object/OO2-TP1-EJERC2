@@ -1,4 +1,6 @@
-public class Bebida extends Producto{
+package modelo;
+
+public class Bebida extends Producto {
 
     public Bebida(String nombre, float precio) {
         super(nombre, precio);

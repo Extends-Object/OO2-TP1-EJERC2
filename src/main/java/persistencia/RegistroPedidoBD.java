@@ -1,5 +1,6 @@
+package persistencia;
+
 import exceptions.DatabaseConnectionException;
-import persistencia.ConnectionManager;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -7,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-public class RegistroPedidoBD implements RegistroPedido{
+public class RegistroPedidoBD implements RegistroPedido {
 
     @Override
     public void registrarPedido(LocalDate fecha, float montoFinal) throws DatabaseConnectionException {

@@ -1,4 +1,8 @@
 import exceptions.DatabaseConnectionException;
+import modelo.*;
+import persistencia.RegistroPedido;
+import persistencia.RegistroPedidoArchivo;
+import persistencia.RegistroPedidoBD;
 
 import java.time.LocalDate;
 

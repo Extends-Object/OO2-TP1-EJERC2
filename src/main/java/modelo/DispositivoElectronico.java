@@ -1,10 +1,13 @@
+package modelo;
+
 import exceptions.DatabaseConnectionException;
+import persistencia.RegistroPedido;
+
 import java.time.LocalDate;
-import java.util.List;
 
 public class DispositivoElectronico {
 
-    //private List<Pedido> listaPedidos;
+    //private List<modelo.Pedido> listaPedidos;
     private RegistroPedido registro;
 
     public DispositivoElectronico(RegistroPedido registro) {
@@ -29,7 +32,7 @@ public class DispositivoElectronico {
         this.registro.registrarPedido(fecha, totalConDescuentoYPropina);
 
         return totalConDescuentoYPropina;
-        // Propina puede ser 0.02, 0.03, 0.05
+        // modelo.Propina puede ser 0.02, 0.03, 0.05
     }
 
 }

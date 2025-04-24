@@ -1,11 +1,12 @@
 import exceptions.DatabaseConnectionException;
+import persistencia.RegistroPedido;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegistroPedidoFake implements RegistroPedido{
+public class RegistroPedidoFake implements RegistroPedido {
 
     private final List<String> listaPedidos = new ArrayList<>();
 

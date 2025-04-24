@@ -1,4 +1,6 @@
-public class TarjetaVisa implements Tarjeta{
+package modelo;
+
+public class TarjetaVisa implements Tarjeta {
 
     @Override
     public float aplicarDescuento(float subtotalPlatos, float subtotalBebidas) {

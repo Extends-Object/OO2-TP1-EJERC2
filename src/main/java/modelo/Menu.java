@@ -1,3 +1,5 @@
+package modelo;
+
 import java.util.ArrayList;
 
 public class Menu {
@@ -13,7 +15,7 @@ public class Menu {
 
 
     /*
-    public void agregarAlMenu(Producto producto) {
+    public void agregarAlMenu(modelo.Producto producto) {
         if(producto.esPlato()) {
             this.platos.add(producto);
         } else {

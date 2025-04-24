@@ -1,5 +1,8 @@
 import exceptions.DatabaseConnectionException;
+import modelo.*;
 import org.junit.jupiter.api.Test;
+import persistencia.RegistroPedido;
+
 import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,7 +25,7 @@ public class DispositivoTest {
         float montoFinal;
 
         //Total con el descuento da 8847.085
-        //Propina es de 445.025
+        //modelo.Propina es de 445.025
         //Total mas la propina da 9292.11
 
         //Exercise
@@ -58,7 +61,7 @@ public class DispositivoTest {
         float montoFinal;
 
         //Total con el descuento da 8758.1
-        //Propina es de 267.015
+        //modelo.Propina es de 267.015
         //Total con descuento mas la propina da 9025.115
 
         //Exercise
@@ -94,7 +97,7 @@ public class DispositivoTest {
         float montoFinal;
 
         //Total con el descuento da 8722.49
-        //Propina es de 178.01
+        //modelo.Propina es de 178.01
         //Total con descuento mas la propina da 8900.5
 
         //Exercise
@@ -130,7 +133,7 @@ public class DispositivoTest {
         LocalDate fechaPedido = LocalDate.now();
         float montoFinal;
 
-        //Propina es de 445.025
+        //modelo.Propina es de 445.025
         //Total con descuento mas la propina da 9345.525
 
         //Exercise
